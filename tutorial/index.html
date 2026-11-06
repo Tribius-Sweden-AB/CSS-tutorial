@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML &amp; CSS</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="/tutorial/shell.css" />
+  </head>
+  <body>
+    <aside class="panel">
+      <div class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        <div>
+          <strong>HTML &amp; CSS</strong>
+          <small>Grunderna, steg för steg</small>
+        </div>
+      </div>
+
+      <nav class="progress" id="progress" aria-label="Steg"></nav>
+
+      <article class="lesson" id="lesson"></article>
+
+      <footer class="pager">
+        <button id="prev" class="btn ghost" type="button">← Förra</button>
+        <button id="next" class="btn" type="button">Nästa steg →</button>
+      </footer>
+    </aside>
+
+    <main class="screen">
+      <div class="browser">
+        <div class="browser-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <button id="home" class="bar-btn" type="button" title="Gå till startsidan">⌂</button>
+          <button id="reload" class="bar-btn" type="button" title="Ladda om">↻</button>
+          <div class="url" id="url">localhost:5173</div>
+          <a id="new-tab" class="bar-btn" href="/" target="_blank" title="Öppna i ny flik">↗</a>
+        </div>
+        <iframe id="frame" src="/" title="Din webbsida"></iframe>
+      </div>
+    </main>
+
+    <script type="module" src="/tutorial/main.js"></script>
+  </body>
+</html>

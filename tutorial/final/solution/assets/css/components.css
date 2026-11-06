@@ -1,0 +1,160 @@
+/*
+  components.css: återanvändbara delar
+*/
+
+/* ── Knappar ────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-sm) 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.btn--primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-brand);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-brand-subtle);
+  color: var(--color-text-on-brand);
+}
+
+.btn--secondary {
+  background-color: var(--color-surface-secondary);
+  border-color: var(--color-border-default);
+  color: var(--color-text-primary);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.button-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.lang-switch {
+  padding: 6px 10px;
+  background: none;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-button);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+/* ── Logga ──────────────────────────────────────────────── */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-logo);
+  line-height: var(--line-height-logo);
+  font-weight: var(--font-weight-bold);
+}
+
+.logo__mark {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-brand-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* ── Etikett ────────────────────────────────────────────── */
+
+.eyebrow {
+  padding: var(--space-2xs) var(--space-sm);
+  background-color: var(--color-brand-subtle);
+  border-radius: var(--radius-pill);
+  color: var(--color-brand-primary);
+  font-size: var(--font-size-xsmall);
+  line-height: var(--line-height-xsmall);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ── Kort ───────────────────────────────────────────────── */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-card);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-card);
+  background-color: var(--color-surface-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-brand-subtle);
+  border-radius: var(--radius-icon);
+}
+
+/* ── Lista med blå prickar ──────────────────────────────── */
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-text-primary);
+}
+
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Kontaktkort ────────────────────────────────────────── */
+
+.contact-card {
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.contact-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card__avatar {
+  width: 64px;
+  height: 64px;
+}
+
+.contact-card__email {
+  color: var(--color-brand-primary);
+}
+

@@ -1,0 +1,52 @@
+/*
+  reset.css
+
+  Grundinställningar som nästan alla webbprojekt har. Webbläsare har lite olika
+  standardstilar, och några av dem är mest i vägen. Den här filen jämnar ut det
+  så att din egen CSS i styles.css beter sig som du förväntar dig.
+
+  Du behöver inte ändra något här. Men läs gärna vad varje regel gör.
+*/
+
+/* Bredd och höjd räknas MED padding och border.
+   Utan detta blir en box med width: 300px och padding: 20px faktiskt 340px bred. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ta bort den lilla vita kanten runt hela sidan som webbläsaren lägger till. */
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bilder blir aldrig bredare än lådan de ligger i,
+   och får inget konstigt mellanrum under sig. */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Knappar och formulär använder samma typsnitt som resten av sidan. */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Långa ord bryts i stället för att sticka ut utanför sin låda. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

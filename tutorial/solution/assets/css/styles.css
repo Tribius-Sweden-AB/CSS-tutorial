@@ -1,0 +1,114 @@
+@import './variables.css';
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--color-brand);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-xl);
+  background-color: var(--color-text);
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.brand img {
+  width: 36px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  border-radius: var(--radius-lg);
+}
+
+.hero ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  list-style: none;
+  padding: 0;
+  color: var(--color-text-muted);
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.card {
+  width: 280px;
+  background-color: var(--color-surface);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
+footer {
+  padding: var(--space-md) var(--space-xl);
+  background-color: var(--color-footer);
+  text-align: center;
+}

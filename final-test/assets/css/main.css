@@ -1,0 +1,18 @@
+/*
+  main.css: den enda filen som länkas in i index.html
+
+  Den hämtar in de andra filerna i rätt ordning. Ordningen spelar roll:
+  det som kommer senare kan skriva över det som kom före.
+
+  1. reset.css       grundinställningar (rör inte)
+  2. variables.css   färger, typsnitt, avstånd från Figma (rör inte, men använd!)
+  3. base.css        hur vanliga taggar ser ut: body, h1, p, a ...
+  4. layout.css      sidans stora delar: container, sektioner, hero, footer
+  5. components.css  återanvändbara delar: knappar, kort, loggan ...
+*/
+
+@import './reset.css';
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './components.css';

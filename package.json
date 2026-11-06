@@ -1,0 +1,14 @@
+{
+  "name": "css-tutorial",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "reset": "node tutorial/reset.js",
+    "reset:final": "node tutorial/reset.js --final"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- 1. Header -->
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a class="logo" href="#">
+          <span class="logo__mark"></span>
+          Lumo
+        </a>
+
+        <nav class="site-nav">
+          <a href="#">Hem</a>
+          <a href="#funktioner">Funktioner</a>
+          <a href="#">Priser</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <button class="lang-switch" type="button">EN</button>
+          <a class="btn btn--primary" href="#">Kom igång</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. Hero -->
+      <section class="section">
+        <div class="container split">
+          <div class="split__text hero__text">
+            <span class="eyebrow">NYHET · LUMO 2.0</span>
+            <h1 class="display">Håll koll på vanorna som faktiskt betyder något</h1>
+            <p class="lead">
+              Lumo hjälper dig bygga små vanor som håller. Inga streaks att stressa över, inga
+              notiser du inte bett om.
+            </p>
+            <div class="button-row">
+              <a class="btn btn--primary" href="#">Kom igång</a>
+              <a class="btn btn--secondary" href="#">Se demo</a>
+            </div>
+          </div>
+          <img class="split__image" src="assets/images/hero.png" alt="Illustration av berg och en sol" />
+        </div>
+      </section>
+
+      <!-- 3. Loggor -->
+      <section class="logos" aria-label="Kunder">
+        <div class="container logos__row">
+          <span>ACME</span>
+          <span>Nordic</span>
+          <span>Kvadrat</span>
+          <span>Bolt</span>
+          <span>Hemma</span>
+        </div>
+      </section>
+
+      <!-- 4. Funktioner -->
+      <section class="section" id="funktioner">
+        <div class="container">
+          <h2 class="section__title">Tre skäl att välja Lumo</h2>
+          <div class="card-grid">
+            <article class="card">
+              <span class="card__icon"></span>
+              <h3>Små steg</h3>
+              <p>Sätt mål som tar två minuter. Lite varje dag slår mycket en gång.</p>
+            </article>
+            <article class="card">
+              <span class="card__icon"></span>
+              <h3>Ingen press</h3>
+              <p>Missar du en dag händer ingenting. Lumo räknar framsteg, inte misslyckanden.</p>
+            </article>
+            <article class="card">
+              <span class="card__icon"></span>
+              <h3>Dina data</h3>
+              <p>Allt sparas lokalt om du vill. Ingen försäljning, ingen reklam.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Innehåll -->
+      <section class="section section--alt">
+        <div class="container split">
+          <img class="split__image" src="assets/images/hero.png" alt="Illustration av berg och en sol" />
+          <div class="split__text">
+            <h2>Byggt för vardagen, inte för appbutiken</h2>
+            <p>Vi mäter inte hur ofta du öppnar appen. Vi mäter om vanan sitter om tre månader.</p>
+            <ul class="check-list">
+              <li><img src="assets/images/bullet.svg" alt="" />Påminnelser som du själv styr</li>
+              <li><img src="assets/images/bullet.svg" alt="" />Statistik per vecka, inte per dag</li>
+              <li><img src="assets/images/bullet.svg" alt="" />Export till kalender</li>
+            </ul>
+            <a class="btn btn--secondary" href="#">Se demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Kontakt -->
+      <section class="section" id="kontakt">
+        <div class="container">
+          <h2 class="section__title">Prata med oss</h2>
+          <div class="card-grid">
+            <article class="card contact-card">
+              <img class="contact-card__avatar" src="assets/images/avatar.png" alt="" width="64" height="64" />
+              <div>
+                <h3>Anna Berg</h3>
+                <p class="contact-card__role">Kundansvarig</p>
+                <a class="contact-card__email" href="mailto:anna@lumo.se">anna@lumo.se</a>
+              </div>
+              <a class="btn btn--secondary btn--block" href="mailto:anna@lumo.se">Kontakta</a>
+            </article>
+            <article class="card contact-card">
+              <img class="contact-card__avatar" src="assets/images/avatar.png" alt="" width="64" height="64" />
+              <div>
+                <h3>Erik Lund</h3>
+                <p class="contact-card__role">Support</p>
+                <a class="contact-card__email" href="mailto:erik@lumo.se">erik@lumo.se</a>
+              </div>
+              <a class="btn btn--secondary btn--block" href="mailto:erik@lumo.se">Kontakta</a>
+            </article>
+            <article class="card contact-card">
+              <img class="contact-card__avatar" src="assets/images/avatar.png" alt="" width="64" height="64" />
+              <div>
+                <h3>Sara Holm</h3>
+                <p class="contact-card__role">Partnerskap</p>
+                <a class="contact-card__email" href="mailto:sara@lumo.se">sara@lumo.se</a>
+              </div>
+              <a class="btn btn--secondary btn--block" href="mailto:sara@lumo.se">Kontakta</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <a class="logo" href="#">
+            <span class="logo__mark"></span>
+            Lumo
+          </a>
+          <div class="site-footer__columns">
+            <nav class="footer-column" aria-label="Produkt">
+              <h3>Produkt</h3>
+              <a href="#">Funktioner</a>
+              <a href="#">Priser</a>
+              <a href="#">Ändringslogg</a>
+            </nav>
+            <nav class="footer-column" aria-label="Företag">
+              <h3>Företag</h3>
+              <a href="#">Om oss</a>
+              <a href="#">Jobb</a>
+              <a href="#">Kontakt</a>
+            </nav>
+            <nav class="footer-column" aria-label="Hjälp">
+              <h3>Hjälp</h3>
+              <a href="#">Support</a>
+              <a href="#">Integritet</a>
+              <a href="#">Villkor</a>
+            </nav>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 Lumo AB. Alla rättigheter förbehållna.</p>
+          <nav class="site-footer__legal" aria-label="Juridiskt">
+            <a href="#">Integritet</a>
+            <a href="#">Cookies</a>
+            <a href="#">Tillgänglighet</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

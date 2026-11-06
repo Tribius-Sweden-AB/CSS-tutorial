@@ -1,0 +1,20 @@
+:root {
+  --color-background: #f5f3ef;
+  --color-text: #1f2328;
+  --color-text-muted: #6e7781;
+  --color-brand: #e8613c;
+  --color-surface: #ffffff;
+  --color-border: #e1ddd5;
+  --color-footer: #e8e4dc;
+
+  --font-family: 'Space Grotesk', system-ui, sans-serif;
+
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}

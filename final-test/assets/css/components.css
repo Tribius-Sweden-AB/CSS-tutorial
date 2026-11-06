@@ -1,0 +1,18 @@
+/*
+  components.css: återanvändbara delar
+
+  Saker som finns på flera ställen i designen och ska se likadana ut.
+  Skriv dem EN gång här och använd klassen överallt.
+
+  Förslag på klasser:
+    .btn              grundknapp: padding, radius, typsnitt
+    .btn--primary     blå knapp
+    .btn--secondary   grå knapp med kant
+    .logo             blå fyrkant + "Lumo"
+    .eyebrow          den lilla etiketten "NYHET · LUMO 2.0"
+    .card             kort med bakgrund, kant och rundade hörn
+    .contact-card     kontaktkorten längst ner
+
+  Tips: BEM-namn som .btn--primary betyder "en variant av .btn".
+  Man skriver då båda klasserna i HTML: class="btn btn--primary"
+*/

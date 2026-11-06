@@ -1,0 +1,95 @@
+/*
+  variables.css: designens "tokens"
+
+  Alla färger, storlekar och avstånd från Figma-designen samlade på ett ställe.
+  Använd dem i resten av CSS:en med var(), till exempel:
+
+    background-color: var(--color-surface-page);
+    padding: var(--space-card);
+
+  Vill man byta blå färg på hela sajten ändrar man på EN rad här.
+  Det är så riktiga projekt gör.
+*/
+
+:root {
+  /* ── Färger ───────────────────────────────────────────── */
+
+  /* Bakgrunder */
+  --color-surface-page: #030712; /* sidans bakgrund */
+  --color-surface-primary: #111827; /* header, kort, varannan sektion */
+  --color-surface-secondary: #1f2937; /* sekundära knappar */
+
+  /* Varumärke */
+  --color-brand-primary: #3b82f6; /* blå: knappar, länkar, logga */
+  --color-brand-subtle: #1e3a8a; /* mörkblå: ikoner, etiketter */
+
+  /* Text */
+  --color-text-primary: #f9fafb; /* rubriker och viktig text */
+  --color-text-secondary: #9ca3af; /* brödtext och menylänkar */
+  --color-text-on-brand: #ffffff; /* text på blå knappar */
+
+  /* Kanter */
+  --color-border-default: #374151;
+
+  /* ── Typografi ────────────────────────────────────────── */
+
+  --font-family: 'Inter', system-ui, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Storlek + radhöjd hör ihop, använd dem i par */
+  --font-size-display: 48px; /* stora rubriken i hero */
+  --line-height-display: 56px;
+
+  --font-size-h1: 32px; /* sektionsrubriker */
+  --line-height-h1: 40px;
+
+  --font-size-h2: 24px; /* rubriker i kort */
+  --line-height-h2: 32px;
+
+  --font-size-logo: 20px; /* loggan och logo-raden */
+  --line-height-logo: 28px;
+
+  --font-size-lead: 18px; /* ingress under stora rubriken */
+  --line-height-lead: 28px;
+
+  --font-size-body: 16px; /* vanlig text, knappar */
+  --line-height-body: 24px;
+
+  --font-size-small: 14px; /* footer-länkar, titlar i kontaktkort */
+  --line-height-small: 20px;
+
+  --font-size-xsmall: 12px; /* etiketter, copyright */
+  --line-height-xsmall: 16px;
+
+  /* ── Avstånd ──────────────────────────────────────────── */
+
+  --space-section: 96px; /* luft ovanför/under varje sektion */
+  --space-block: 48px; /* mellan rubrik och innehåll i en sektion */
+  --space-card: 24px; /* padding i kort, gap mellan kort */
+
+  /* Mindre steg, för gap och padding */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 64px;
+
+  /* ── Former ───────────────────────────────────────────── */
+
+  --radius-sm: 6px; /* logomärket */
+  --radius-button: 8px;
+  --radius-icon: 12px;
+  --radius-card: 16px; /* kort, bilder, header */
+  --radius-pill: 999px; /* helt runda ändar */
+
+  /* ── Layout ───────────────────────────────────────────── */
+
+  --container-width: 1200px; /* max bredd på innehållet */
+  --image-height: 400px; /* höjden på de stora bilderna */
+}

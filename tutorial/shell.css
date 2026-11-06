@@ -1,0 +1,583 @@
+/* Utseendet på själva tutorialen (inte elevens sajt). */
+
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --panel-2: #1c2129;
+  --line: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --green: #3fb950;
+  --code-bg: #0d1117;
+  --radius: 8px;
+  --font: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(380px, 40%) 1fr;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ───────── Vänster panel ───────── */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100vh;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px 12px;
+}
+
+.brand .logo {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  color: var(--accent);
+  font: 600 13px var(--mono);
+}
+
+.brand strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.progress {
+  display: flex;
+  gap: 4px;
+  padding: 4px 24px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dot {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font: 500 12px var(--mono);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.dot:hover {
+  border-color: var(--muted);
+}
+
+.dot.done {
+  background: rgba(63, 185, 80, 0.15);
+  border-color: rgba(63, 185, 80, 0.5);
+  color: var(--green);
+}
+
+.dot.current {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(88, 166, 255, 0.12);
+}
+
+.dot.final {
+  flex: 2;
+  font-family: var(--font);
+}
+
+.dot:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.dot:disabled:hover {
+  border-color: var(--line);
+}
+
+.design-preview {
+  display: block;
+  max-height: 320px;
+  margin: 14px 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.design-preview img {
+  display: block;
+  width: 100%;
+  transition: transform 6s ease-in-out;
+}
+
+/* Hovra för att "scrolla" igenom designen */
+.design-preview:hover img {
+  transform: translateY(calc(-100% + 320px));
+}
+
+.lesson {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 24px 32px;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--muted);
+  font: 500 12px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lesson h1 {
+  margin: 6px 0 14px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.lesson h2 {
+  margin: 28px 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+}
+
+.lesson a {
+  color: var(--accent);
+}
+
+.intro ul,
+details ol {
+  padding-left: 20px;
+}
+
+.intro li {
+  margin: 4px 0;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: rgba(110, 118, 129, 0.2);
+  border-radius: 5px;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+
+kbd {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--panel-2);
+}
+
+pre.code {
+  position: relative;
+  margin: 12px 0;
+  padding: 12px 16px;
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+pre.code::before {
+  content: attr(data-lang);
+  display: block;
+  margin-bottom: 6px;
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+pre.code code {
+  display: block;
+  padding: 0;
+  background: none;
+  white-space: pre;
+  color: #e6edf3;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+pre.code[data-lang='css'] code {
+  color: #a5d6ff;
+}
+
+.copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font: 500 11px var(--font);
+  cursor: pointer;
+}
+
+.copy:hover {
+  color: var(--text);
+}
+
+/* Uppgifter */
+
+.tasks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.task {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  background: var(--panel-2);
+  transition: background-color 0.2s;
+}
+
+.task + .task {
+  border-top: 1px solid var(--line);
+}
+
+.tick {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  border: 1.5px solid var(--muted);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.task.ok {
+  background: rgba(63, 185, 80, 0.06);
+}
+
+.task.ok > div {
+  color: var(--muted);
+}
+
+.task.ok .tick {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--bg);
+}
+
+.task.ok .tick::after {
+  content: '✓';
+}
+
+/* Ledtråd under en uppgift som inte är klar */
+.hint {
+  margin: 6px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid #d29922;
+  color: #d29922;
+  font-size: 13px;
+}
+
+.all-done {
+  margin: 12px 0 0;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Tips & lösning */
+
+details {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+}
+
+details + details {
+  margin-top: 6px;
+}
+
+details > :not(summary) {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+details > :last-child {
+  margin-bottom: 14px;
+}
+
+summary {
+  padding: 9px 14px;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '+';
+  float: right;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+
+details[open] summary::after {
+  content: '−';
+}
+
+.cheat {
+  margin-top: 28px;
+  border-style: dashed;
+  background: transparent;
+  color: var(--muted);
+}
+
+.cheat[open] {
+  color: var(--text);
+}
+
+.cheat-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 0;
+}
+
+/* Box-modell-diagram */
+
+.boxmodel {
+  margin: 12px 0;
+  font: 500 11px var(--mono);
+  text-align: center;
+}
+
+.boxmodel span {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.bm-margin {
+  padding: 6px 12px 12px;
+  border: 1px dashed #d29922;
+  border-radius: 6px;
+  color: #d29922;
+}
+
+.bm-border {
+  padding: 6px 12px 12px;
+  border: 3px solid #8b949e;
+  border-radius: 4px;
+  color: #c9d1d9;
+}
+
+.bm-padding {
+  padding: 6px 12px 12px;
+  background: rgba(63, 185, 80, 0.14);
+  color: var(--green);
+}
+
+.bm-content {
+  padding: 10px;
+  background: rgba(88, 166, 255, 0.25);
+  color: var(--text);
+}
+
+/* Knappar längst ner */
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--line);
+}
+
+.btn {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--text);
+  font: 500 14px var(--font);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--muted);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.btn.ready {
+  background: #238636;
+  border-color: rgba(240, 246, 252, 0.1);
+  color: #fff;
+}
+
+.btn.ready:hover {
+  background: #2ea043;
+}
+
+/* ───────── Skärmen ───────── */
+
+.screen {
+  display: flex;
+  min-width: 0;
+  height: 100vh;
+  padding: 16px;
+}
+
+.browser {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-right: 10px;
+}
+
+.dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.bar-btn {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.bar-btn:hover {
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.url {
+  flex: 1;
+  min-width: 0;
+  margin: 0 4px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 12px var(--mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+/* ───────── Smal skärm ───────── */
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 70vh;
+    height: auto;
+  }
+
+  .panel {
+    height: auto;
+  }
+
+  .lesson {
+    overflow: visible;
+  }
+
+  .screen {
+    height: 70vh;
+  }
+}

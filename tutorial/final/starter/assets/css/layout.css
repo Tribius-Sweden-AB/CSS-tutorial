@@ -1,0 +1,13 @@
+/*
+  layout.css: sidans stora delar
+
+  Här bestämmer du hur sektionerna placeras: hur breda de är, hur mycket luft
+  de har och vad som ligger bredvid vad (flexbox!).
+
+  Förslag på klasser:
+    .container     max-bredd (--container-width) och centrerat med margin: 0 auto
+    .section       luft ovanför och under (--space-section)
+    .section--alt  sektion med den ljusare bakgrunden (--color-surface-primary)
+    .hero, .split  text och bild bredvid varandra
+    .site-header, .site-footer
+*/

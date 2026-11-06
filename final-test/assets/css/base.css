@@ -1,0 +1,18 @@
+/*
+  base.css: hur vanliga HTML-taggar ser ut
+
+  Här stylar du taggar direkt (body, h1, h2, p, a), inga klasser.
+  Använd variablerna från variables.css.
+
+  Exempel att börja med:
+*/
+
+body {
+  background-color: var(--color-surface-page);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+/* Fortsätt här: h1, h2, h3, p, a ... */
